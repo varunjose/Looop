@@ -1,0 +1,17 @@
+{
+  "name": "looop-product-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Product introduction site for looop.app — the AI app builder that works until the tests pass.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "test": "node scripts/check.mjs && node scripts/smoke.mjs && node scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

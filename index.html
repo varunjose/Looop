@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f4ff" />
+    <meta
+      name="description"
+      content="Looop is the AI app builder that generates, tests, repairs, and repeats until your app passes real checks."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="looop — From prompt to passing" />
+    <meta
+      property="og:description"
+      content="An AI app builder with a real oracle: typecheck, unit, and end-to-end tests decide when the work is done."
+    />
+    <meta property="og:image" content="./og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="./styles.css" as="style" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <title>looop — From prompt to passing</title>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Looop home">
+          <span class="brand-mark" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </span>
+          <span>looop</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          data-nav-toggle
+        >
+          <span class="sr-only">Open navigation</span>
+          <span></span><span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links" data-nav-links>
+          <a href="#difference">Why looop</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#status">Status</a>
+          <a class="nav-cta" href="https://github.com/varunjose/Looop" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.6 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.92c-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .08 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.66.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.35 9.35 0 0 1 12 6.68a9.3 9.3 0 0 1 2.5.35c1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.94-2.35 4.8-4.58 5.06.36.32.68.94.68 1.9v3.08c0 .27.18.59.69.49A10.23 10.23 0 0 0 22 12.26C22 6.6 17.52 2 12 2Z" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="orb orb-one" aria-hidden="true"></div>
+        <div class="orb orb-two" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">
+              <span class="eyebrow-dot"></span>
+              Autonomous app building, verified by code
+            </div>
+
+            <h1 id="hero-title">
+              From prompt<br />
+              <span class="hero-accent">to passing.</span>
+            </h1>
+
+            <div class="hero-bottom">
+              <p>
+                Looop generates your app, runs real checks, reads every failure, and repairs the work.
+                It stops only when the tests pass—or when another attempt would waste your budget.
+              </p>
+
+              <div class="hero-actions">
+                <a class="button button-primary" href="#live-run">
+                  Watch a real loop
+                  <span aria-hidden="true">↘</span>
+                </a>
+                <a class="button button-quiet" href="#difference">
+                  Why it works
+                  <span aria-hidden="true">↓</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="orbit-rail" aria-hidden="true">
+            <span class="orbit-label">GENERATE</span>
+            <span class="orbit-track"><i></i></span>
+            <span class="orbit-label">VERIFY</span>
+            <span class="orbit-track orbit-track-short"><i></i></span>
+            <span class="orbit-label">REPAIR</span>
+          </div>
+
+          <div class="workbench-wrap reveal" id="live-run" data-loop-demo>
+            <div class="workbench-shadow" aria-hidden="true"></div>
+            <div class="workbench">
+              <div class="workbench-bar">
+                <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="workspace-name">
+                  <span class="workspace-icon" aria-hidden="true">L</span>
+                  <span>payments-dashboard</span>
+                  <small>main</small>
+                </div>
+                <div class="run-badge" data-run-badge>
+                  <span></span>
+                  <strong data-run-state>Running oracle</strong>
+                </div>
+              </div>
+
+              <div class="workbench-body">
+                <aside class="file-rail" aria-label="Project files">
+                  <div class="rail-heading"><span>PROJECT</span><span>•••</span></div>
+                  <ul>
+                    <li><span class="chevron">⌄</span><b>▣</b> src</li>
+                    <li class="rail-file"><b class="file-ts">TS</b> dashboard.tsx</li>
+                    <li class="rail-file"><b class="file-ts">TS</b> api.ts</li>
+                    <li><span class="chevron">⌄</span><b>▣</b> tests</li>
+                    <li class="rail-file"><b class="file-test">✓</b> dashboard.test.ts</li>
+                    <li class="rail-file"><b class="file-test">✓</b> checkout.spec.ts</li>
+                  </ul>
+                  <div class="rail-footer">
+                    <span><i class="status-pulse"></i> Session active</span>
+                    <small>Budget $0.08</small>
+                  </div>
+                </aside>
+
+                <div class="run-panel">
+                  <div class="run-head">
+                    <div>
+                      <span class="section-kicker">AUTONOMOUS RUN</span>
+                      <h2 data-attempt-title>Attempt 1 of 4</h2>
+                    </div>
+                    <button class="icon-button" type="button" data-replay aria-label="Replay autonomous run">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4.5 8.5A8 8 0 1 1 4 14m.5-5.5V4m0 4.5H9" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="prompt-card">
+                    <span class="prompt-glyph" aria-hidden="true">✦</span>
+                    <p>Add searchable transactions, a refund action, and an audit trail.</p>
+                    <span class="prompt-meta">Blueprint · dashboard</span>
+                  </div>
+
+                  <div class="check-list" aria-live="polite">
+                    <div class="check-row" data-check="typecheck" data-state="running">
+                      <span class="check-icon"><i></i></span>
+                      <div><strong>Typecheck</strong><small data-check-detail="typecheck">Running tsc</small></div>
+                      <span class="check-time" data-check-time="typecheck">0.8s</span>
+                    </div>
+                    <div class="check-row" data-check="unit" data-state="waiting">
+                      <span class="check-icon"><i></i></span>
+                      <div><strong>Unit tests</strong><small data-check-detail="unit">Waiting on typecheck</small></div>
+                      <span class="check-time" data-check-time="unit">—</span>
+                    </div>
+                    <div class="check-row" data-check="e2e" data-state="waiting">
+                      <span class="check-icon"><i></i></span>
+                      <div><strong>End-to-end</strong><small data-check-detail="e2e">Waiting on unit tests</small></div>
+                      <span class="check-time" data-check-time="e2e">—</span>
+                    </div>
+                  </div>
+
+                  <div class="run-metrics">
+                    <div class="score-wrap">
+                      <div class="score-label"><span>Oracle score</span><strong data-score>0%</strong></div>
+                      <div class="score-track"><i data-score-bar></i></div>
+                    </div>
+                    <div class="metric"><span>Cost</span><strong data-cost>$0.0120</strong></div>
+                    <div class="metric"><span>Elapsed</span><strong data-elapsed>1.5s</strong></div>
+                  </div>
+                </div>
+
+                <aside class="activity-panel" aria-label="Run activity">
+                  <div class="activity-heading">
+                    <span>LIVE ACTIVITY</span>
+                    <i></i>
+                  </div>
+                  <ol data-activity>
+                    <li class="is-done"><span>01</span><div><strong>Blueprint ready</strong><small>0 tokens</small></div></li>
+                    <li class="is-active"><span>02</span><div><strong>Writing slots</strong><small>Model attempt</small></div></li>
+                    <li><span>03</span><div><strong>Running oracle</strong><small>Real artifacts</small></div></li>
+                    <li><span>04</span><div><strong>Decision</strong><small>Deterministic</small></div></li>
+                  </ol>
+                  <div class="activity-note">
+                    <span class="note-icon" aria-hidden="true">i</span>
+                    <p>The model can write code. It cannot declare success.</p>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+
+          <div class="proof-strip reveal" aria-label="Project proof points">
+            <div><strong>236</strong><span>tests in the core</span></div>
+            <div><strong>3</strong><span>real check layers</span></div>
+            <div><strong>0</strong><span>model calls in verify</span></div>
+            <div><strong>1</strong><span>definition of done</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="difference section" id="difference" aria-labelledby="difference-title">
+        <div class="container">
+          <div class="section-intro reveal">
+            <span class="section-number">01 / THE DIFFERENCE</span>
+            <h2 id="difference-title">
+              The model makes the attempt.<br />
+              <span>The oracle decides.</span>
+            </h2>
+            <p>
+              Asking a model to grade its own output creates a loop that can end on a confident lie.
+              Looop separates making from judging, so success comes from tools—not a prompt.
+            </p>
+          </div>
+
+          <div class="split-architecture reveal">
+            <article class="architecture-card architecture-attempt">
+              <div class="architecture-top">
+                <span class="code-label">attempt()</span>
+                <span class="architecture-status">Creative</span>
+              </div>
+              <div class="architecture-visual attempt-visual" aria-hidden="true">
+                <span class="slot-line slot-line-one"></span>
+                <span class="slot-line slot-line-two"></span>
+                <span class="slot-line slot-line-three"></span>
+                <i class="slot-cursor"></i>
+                <span class="slot-tag">writable slot</span>
+              </div>
+              <h3>Generate and repair</h3>
+              <p>The model writes only inside tested blueprint slots and uses exact failures as its next instruction.</p>
+              <ul>
+                <li>Writes work</li>
+                <li>Reads failures</li>
+                <li>Never decides success</li>
+              </ul>
+            </article>
+
+            <div class="architecture-bridge" aria-hidden="true">
+              <span>real artifacts</span>
+              <i>→</i>
+            </div>
+
+            <article class="architecture-card architecture-verify">
+              <div class="architecture-top">
+                <span class="code-label">verify()</span>
+                <span class="architecture-status">Deterministic</span>
+              </div>
+              <div class="architecture-visual verify-visual" aria-hidden="true">
+                <div><span>tsc</span><i>✓</i></div>
+                <div><span>vitest</span><i>✓</i></div>
+                <div><span>e2e</span><i>✓</i></div>
+              </div>
+              <h3>Run the real checks</h3>
+              <p>The oracle inspects real code in a real workspace. There is no model call anywhere in the verifier.</p>
+              <ul>
+                <li>Runs tools</li>
+                <li>Scores artifacts</li>
+                <li>Never generates code</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="loop-equation reveal" aria-label="Looop system equation">
+            <div><span>01</span><strong>Attempt</strong><small>produce work</small></div>
+            <i aria-hidden="true">+</i>
+            <div><span>02</span><strong>Verify</strong><small>measure truth</small></div>
+            <i aria-hidden="true">+</i>
+            <div><span>03</span><strong>runLoop</strong><small>control spend</small></div>
+            <i aria-hidden="true">=</i>
+            <div class="equation-result"><span>✓</span><strong>Convergence</strong><small>the only success</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="process section" id="how-it-works" aria-labelledby="process-title">
+        <div class="container">
+          <div class="section-heading-row reveal">
+            <div>
+              <span class="section-number">02 / HOW IT WORKS</span>
+              <h2 id="process-title">A loop with an exit condition.</h2>
+            </div>
+            <p>
+              Every pass produces evidence. Looop either moves closer to green, deploys, or stops before another attempt becomes waste.
+            </p>
+          </div>
+
+          <ol class="process-grid">
+            <li class="process-card reveal">
+              <div class="process-index"><span>01</span><i></i></div>
+              <div class="process-mini blueprint-mini" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <b>0 tokens</b>
+              </div>
+              <h3>Materialize a blueprint</h3>
+              <p>Start from a tested skeleton that already ships with its own suite.</p>
+            </li>
+            <li class="process-card reveal">
+              <div class="process-index"><span>02</span><i></i></div>
+              <div class="process-mini write-mini" aria-hidden="true">
+                <span>&lt;slot&gt;</span><b></b><span>&lt;/slot&gt;</span>
+              </div>
+              <h3>Write the slots</h3>
+              <p>The model fills constrained regions without touching known-good structure.</p>
+            </li>
+            <li class="process-card reveal">
+              <div class="process-index"><span>03</span><i></i></div>
+              <div class="process-mini oracle-mini" aria-hidden="true">
+                <span>tsc</span><span>unit</span><span>e2e</span>
+              </div>
+              <h3>Run the oracle</h3>
+              <p>Typecheck, unit, and end-to-end checks execute in dependency order.</p>
+            </li>
+            <li class="process-card reveal">
+              <div class="process-index"><span>04</span><i></i></div>
+              <div class="process-mini score-mini" aria-hidden="true">
+                <div><i></i></div><strong>73%</strong>
+              </div>
+              <h3>Score the evidence</h3>
+              <p>Partial credit captures real progress; fingerprints expose repeated failures.</p>
+            </li>
+            <li class="process-card process-card-wide reveal">
+              <div class="process-index"><span>05</span><i></i></div>
+              <div class="decision-mini" aria-hidden="true">
+                <div class="decision-node node-progress"><i></i><span>Progress</span><small>Repair</small></div>
+                <div class="decision-line"></div>
+                <div class="decision-node node-green"><i></i><span>All checks pass</span><small>Deploy</small></div>
+                <div class="decision-line"></div>
+                <div class="decision-node node-stop"><i></i><span>Circling</span><small>Escalate</small></div>
+              </div>
+              <div class="wide-card-copy">
+                <h3>Make the only decision that matters</h3>
+                <p>
+                  Improving? Repair with the failures. Green? Deploy. Stalled or oscillating? Stop spending and hand over the evidence.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="features section" id="features" aria-labelledby="features-title">
+        <div class="container">
+          <div class="section-intro section-intro-centered reveal">
+            <span class="section-number">03 / BUILT DIFFERENTLY</span>
+            <h2 id="features-title">Guardrails you can inspect.<br /><span>Progress you can measure.</span></h2>
+            <p>Not a longer prompt. A system built around truth, boundaries, and a finite budget.</p>
+          </div>
+
+          <div class="bento-grid">
+            <article class="bento-card bento-large bento-oracle reveal">
+              <div class="bento-copy">
+                <span class="feature-tag">REAL ORACLE</span>
+                <h3>Checks, not vibes.</h3>
+                <p>TypeScript, Vitest, and browser tests run against the actual artifact. The verifier cannot call a model by design.</p>
+              </div>
+              <div class="oracle-console" aria-hidden="true">
+                <div class="console-top"><span>verify / run-0182</span><i></i><i></i><i></i></div>
+                <div class="console-row"><span class="console-ok">✓</span><b>typecheck</b><small>passed in 0.82s</small></div>
+                <div class="console-row"><span class="console-ok">✓</span><b>unit</b><small>42 passed in 1.14s</small></div>
+                <div class="console-row"><span class="console-ok">✓</span><b>e2e</b><small>8 passed in 2.63s</small></div>
+                <div class="console-summary"><span>score</span><strong>1.00</strong><b>CONVERGED</b></div>
+              </div>
+            </article>
+
+            <article class="bento-card bento-slots reveal">
+              <div class="bento-copy">
+                <span class="feature-tag">TESTED BLUEPRINTS</span>
+                <h3>Freedom inside safe boundaries.</h3>
+                <p>Models write marked slots. Everything around them is already known to pass.</p>
+              </div>
+              <div class="slot-map" aria-hidden="true">
+                <div class="known-code"><span></span><span></span></div>
+                <div class="writable-code"><small>MODEL WRITES HERE</small><i></i><i></i><i></i></div>
+                <div class="known-code"><span></span><span></span></div>
+              </div>
+            </article>
+
+            <article class="bento-card bento-score reveal">
+              <div class="bento-copy">
+                <span class="feature-tag">PARTIAL CREDIT</span>
+                <h3>Real progress has a shape.</h3>
+                <p>Twelve errors down to three counts. The score shows whether another repair is justified.</p>
+              </div>
+              <div class="score-chart" aria-hidden="true">
+                <div class="chart-line"><i></i><i></i><i></i><i></i></div>
+                <div class="chart-labels"><span>0.24</span><span>0.51</span><span>0.82</span><span>1.00</span></div>
+              </div>
+            </article>
+
+            <article class="bento-card bento-large bento-stop reveal">
+              <div class="stop-visual" aria-hidden="true">
+                <div class="fingerprint fp-one"><span>A</span><i></i><i></i><i></i><i></i></div>
+                <div class="fingerprint fp-two"><span>B</span><i></i><i></i><i></i><i></i></div>
+                <div class="fingerprint fp-three"><span>A</span><i></i><i></i><i></i><i></i></div>
+                <div class="stop-pill"><span>↗</span> Escalate with evidence</div>
+              </div>
+              <div class="bento-copy">
+                <span class="feature-tag">STALL + OSCILLATION DETECTION</span>
+                <h3>Know when to stop.</h3>
+                <p>
+                  Repeated failure fingerprints expose loops that are going nowhere. Looop escalates instead of quietly burning the budget.
+                </p>
+              </div>
+            </article>
+
+            <article class="bento-card bento-state reveal">
+              <div class="bento-copy">
+                <span class="feature-tag">STATEFUL REFINEMENT</span>
+                <h3>Keep what already works.</h3>
+                <p>Every follow-up prompt carries the tested workspace forward, so regressions are caught and repaired.</p>
+              </div>
+              <div class="state-stack" aria-hidden="true">
+                <span>v1 · green</span><span>v2 · refine</span><span>v2 · green</span>
+              </div>
+            </article>
+
+            <article class="bento-card bento-portable reveal">
+              <div class="bento-copy">
+                <span class="feature-tag">PORTABLE CORE</span>
+                <h3>The loop is not the platform.</h3>
+                <p>Pure TypeScript packages keep the engine portable across workerd, Node, and future runtimes.</p>
+              </div>
+              <div class="runtime-row" aria-hidden="true"><span>TS</span><span>Node</span><span>workerd</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="terminal-section section" aria-labelledby="terminal-title">
+        <div class="container terminal-grid">
+          <div class="terminal-copy reveal">
+            <span class="section-number">04 / SEE IT LOCALLY</span>
+            <h2 id="terminal-title">One minute.<br />No credentials.</h2>
+            <p>
+              Run the honest demo: a partial edit breaks typecheck, the next attempt fixes it, and the oracle decides when the loop is done.
+            </p>
+            <div class="command-pills" aria-label="Local setup commands">
+              <button type="button" data-copy="npm install"><code>npm install</code><span>copy</span></button>
+              <button type="button" data-copy="npm test"><code>npm test</code><span>copy</span></button>
+              <button type="button" data-copy="npm run demo"><code>npm run demo</code><span>copy</span></button>
+            </div>
+          </div>
+
+          <div class="terminal-card reveal" data-terminal>
+            <div class="terminal-tabs" role="tablist" aria-label="Demo outcomes">
+              <button id="tab-converged" role="tab" aria-selected="true" aria-controls="terminal-output" data-terminal-tab="converged">Converged</button>
+              <button id="tab-stuck" role="tab" aria-selected="false" aria-controls="terminal-output" data-terminal-tab="stuck">Stuck safely</button>
+              <span class="terminal-spacer"></span>
+              <span class="terminal-live"><i></i> local</span>
+            </div>
+            <div class="terminal-output" id="terminal-output" role="tabpanel" aria-labelledby="tab-converged" data-terminal-output>
+              <div class="terminal-command"><span>→</span> npm run demo</div>
+              <div class="terminal-attempt"><span class="term-muted">attempt 1</span><span class="term-bar"><i style="width: 0%"></i></span><b>0%</b><small>$0.0120 · 1.5s</small></div>
+              <div class="terminal-check term-fail"><span>×</span> typecheck <small>1 problem</small></div>
+              <div class="terminal-check term-skip"><span>·</span> unit <small>Skipped — typecheck did not pass.</small></div>
+              <div class="terminal-space"></div>
+              <div class="terminal-attempt"><span class="term-muted">attempt 2</span><span class="term-bar"><i style="width: 100%"></i></span><b>100%</b><small>$0.0120 · 2.6s</small></div>
+              <div class="terminal-check term-pass"><span>✓</span> typecheck</div>
+              <div class="terminal-check term-pass"><span>✓</span> unit</div>
+              <div class="terminal-result"><span>✓</span><strong>converged</strong><small>2 attempts · $0.0240 · 4.1s</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="comparison section" aria-labelledby="comparison-title">
+        <div class="container">
+          <div class="section-heading-row reveal">
+            <div>
+              <span class="section-number">05 / THE STRUCTURAL GAP</span>
+              <h2 id="comparison-title">A prompt loop is not a repair system.</h2>
+            </div>
+            <p>Looop moves the stop condition out of the model and into software you can inspect.</p>
+          </div>
+
+          <div class="comparison-table-wrap reveal">
+            <table class="comparison-table">
+              <thead>
+                <tr><th>Capability</th><th>Typical prompt loop</th><th><span class="table-brand">looop</span></th></tr>
+              </thead>
+              <tbody>
+                <tr><th>Definition of done</th><td>Model says it looks complete</td><td><span class="yes-dot">✓</span> Every blocking check passes</td></tr>
+                <tr><th>Feedback signal</th><td>Conversation context</td><td><span class="yes-dot">✓</span> Parsed failures from real tools</td></tr>
+                <tr><th>Progress</th><td>Another step was used</td><td><span class="yes-dot">✓</span> Weighted score improved</td></tr>
+                <tr><th>Stop condition</th><td>Step cap or model choice</td><td><span class="yes-dot">✓</span> Convergence, stall, or oscillation</td></tr>
+                <tr><th>When repair will not help</th><td>Keep trying or ask vaguely</td><td><span class="yes-dot">✓</span> Escalate with fingerprints</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="status-section section" id="status" aria-labelledby="status-title">
+        <div class="container">
+          <div class="status-shell reveal">
+            <div class="status-copy">
+              <span class="section-number">06 / BUILT IN PUBLIC</span>
+              <h2 id="status-title">Honest about what is green.</h2>
+              <p>The core loop is tested. The product surface is still being built. Looop shows both.</p>
+            </div>
+
+            <div class="status-columns">
+              <div class="status-column status-ready">
+                <div class="status-column-head"><span><i></i> Built + tested</span><strong>Core</strong></div>
+                <ul>
+                  <li>Loop engine and budgets <span>✓</span></li>
+                  <li>Oracle and parsers <span>✓</span></li>
+                  <li>Blueprint + slot system <span>✓</span></li>
+                  <li>Generator request path <span>✓</span></li>
+                  <li>Durable Object session <span>✓</span></li>
+                  <li>Workbench UI <span>✓</span></li>
+                </ul>
+              </div>
+              <div class="status-column status-next">
+                <div class="status-column-head"><span><i></i> Product next</span><strong>Roadmap</strong></div>
+                <ul>
+                  <li>Authentication <span>→</span></li>
+                  <li>Project list <span>→</span></li>
+                  <li>Live preview <span>→</span></li>
+                  <li>Billing + quotas <span>→</span></li>
+                  <li>Abuse protection <span>→</span></li>
+                  <li>Production deployment <span>→</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="status-footnote">
+              <span class="warning-icon" aria-hidden="true">!</span>
+              <p><strong>Safe default:</strong> sim mode is useful today. Do not expose live generation publicly until auth and quotas are in place.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section" aria-labelledby="faq-title">
+        <div class="container faq-grid">
+          <div class="faq-intro reveal">
+            <span class="section-number">07 / FAQ</span>
+            <h2 id="faq-title">Questions,<br />answered.</h2>
+            <p>Short answers about the loop, the oracle, and where the product stands.</p>
+          </div>
+          <div class="faq-list reveal">
+            <details open>
+              <summary><span>Does a model decide whether the app is correct?</span><i></i></summary>
+              <p>No. The model produces or repairs code. The oracle runs deterministic checks on the real artifact, and only those results can mark a run converged.</p>
+            </details>
+            <details>
+              <summary><span>What happens when Looop cannot fix a failure?</span><i></i></summary>
+              <p>It detects a stalled score or repeating failure fingerprint, stops the run, and escalates the evidence. Escalation means “stop spending,” not “fail louder.”</p>
+            </details>
+            <details>
+              <summary><span>Why start from blueprints?</span><i></i></summary>
+              <p>A blueprint materializes known-good structure and tests at zero token cost. The model works only in marked slots, reducing both risk and repair surface.</p>
+            </details>
+            <details>
+              <summary><span>Is the engine tied to Cloudflare?</span><i></i></summary>
+              <p>No. Packages in the core do not import Cloudflare. The engine is pure TypeScript and is designed to run across workerd, Node, and other compatible runtimes.</p>
+            </details>
+            <details>
+              <summary><span>Is Looop ready for public live generation?</span><i></i></summary>
+              <p>Not yet. The tested core is real, but auth, quotas, billing, abuse protection, and the full preview path still need to be completed before live mode is public.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta section" aria-labelledby="cta-title">
+        <div class="cta-orbits" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="container cta-inner reveal">
+          <span class="section-number">THE LOOP STARTS HERE</span>
+          <h2 id="cta-title">Build until<br /><span>it passes.</span></h2>
+          <p>Follow the core, run the local demo, and watch Looop turn “roughly right” into verifiably green.</p>
+          <div class="cta-actions">
+            <a class="button button-dark" href="https://github.com/varunjose/Looop" target="_blank" rel="noreferrer">
+              View on GitHub
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-light" href="#live-run">Replay the loop <span aria-hidden="true">↑</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a class="brand brand-footer" href="#top" aria-label="Looop home">
+            <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>looop</span>
+          </a>
+          <p>AI app building with a deterministic definition of done.</p>
+        </div>
+        <div class="footer-links">
+          <div><span>Explore</span><a href="#difference">Why looop</a><a href="#how-it-works">How it works</a><a href="#features">Features</a></div>
+          <div><span>Project</span><a href="#status">Status</a><a href="https://github.com/varunjose/Looop" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> looop.app</span>
+        <span>Generate · verify · repair · repeat</span>
+      </div>
+      <div class="footer-wordmark" aria-hidden="true">looop</div>
+    </footer>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

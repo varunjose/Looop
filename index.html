@@ -122,15 +122,62 @@
           <div class="section-intro centered reveal">
             <p class="section-label">01 · WHAT LOOOP DOES</p>
             <h2 id="what-title">From an idea<br />to a verified app.</h2>
-            <p>Looop handles the work between “generate something” and “this is ready to move forward.”</p>
+            <p>Looop turns a plain-language request into a constrained build, checks the real workspace, and uses every failure as the next repair instruction.</p>
           </div>
 
           <ol class="process-grid reveal">
-            <li><span>01</span><div class="process-icon">✦</div><h3>Describe it</h3><p>Explain the app or change you need in normal language.</p></li>
-            <li><span>02</span><div class="process-icon">⌘</div><h3>Build it</h3><p>Looop starts from a tested blueprint and writes inside safe slots.</p></li>
-            <li><span>03</span><div class="process-icon">✓</div><h3>Verify it</h3><p>Typecheck, unit tests, and browser journeys inspect the real output.</p></li>
-            <li><span>04</span><div class="process-icon">↻</div><h3>Repair it</h3><p>Failures become precise repair instructions until every check passes.</p></li>
+            <li>
+              <div class="process-top"><span>01</span><em>INPUT</em></div>
+              <div class="process-icon">✦</div>
+              <h3>Describe it</h3>
+              <p>Explain the app, feature, or change you need in normal language.</p>
+              <ul class="process-details">
+                <li>Capture the product goal</li>
+                <li>Define scope and acceptance checks</li>
+              </ul>
+              <div class="process-output"><span>OUTPUT</span><strong>Structured build intent</strong></div>
+            </li>
+            <li>
+              <div class="process-top"><span>02</span><em>FOUNDATION</em></div>
+              <div class="process-icon">⌘</div>
+              <h3>Build it</h3>
+              <p>Looop starts from a known-good blueprint instead of an empty folder.</p>
+              <ul class="process-details">
+                <li>Materialize tested project structure</li>
+                <li>Write only inside marked safe slots</li>
+              </ul>
+              <div class="process-output"><span>OUTPUT</span><strong>Runnable workspace</strong></div>
+            </li>
+            <li>
+              <div class="process-top"><span>03</span><em>ORACLE</em></div>
+              <div class="process-icon">✓</div>
+              <h3>Verify it</h3>
+              <p>Independent tools inspect the actual files and working behavior.</p>
+              <ul class="process-details">
+                <li>Run typecheck and unit tests</li>
+                <li>Exercise real browser journeys</li>
+              </ul>
+              <div class="process-output"><span>OUTPUT</span><strong>Pass or fail evidence</strong></div>
+            </li>
+            <li>
+              <div class="process-top"><span>04</span><em>LOOP</em></div>
+              <div class="process-icon">↻</div>
+              <h3>Repair it</h3>
+              <p>Exact failures guide the next attempt—without hiding the evidence.</p>
+              <ul class="process-details">
+                <li>Repair from the failed checks</li>
+                <li>Detect stalls and repeated failures</li>
+              </ul>
+              <div class="process-output"><span>OUTPUT</span><strong>Converged or stopped safely</strong></div>
+            </li>
           </ol>
+
+          <div class="process-summary reveal">
+            <div class="process-summary-intro"><span>WHAT COMES OUT</span><h3>More than generated code.</h3></div>
+            <article><i>01</i><div><strong>A tested starting point</strong><p>Blueprints begin in a known-good state, reducing the surface area the model can break.</p></div></article>
+            <article><i>02</i><div><strong>Evidence for every decision</strong><p>See the checks, score, cost, timing, and failure that shaped each attempt.</p></div></article>
+            <article><i>03</i><div><strong>A safe stopping rule</strong><p>Finish only when all blocking checks pass—or stop when the loop is no longer improving.</p></div></article>
+          </div>
         </div>
       </section>
 

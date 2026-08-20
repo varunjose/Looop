@@ -17,12 +17,25 @@ if (!html.includes('class="skip-link"')) failures.push('Missing skip link');
 if (!html.includes('name="viewport"')) failures.push('Missing viewport metadata');
 if (/href="#"/.test(html)) failures.push('Placeholder href found');
 if (!css.includes('@media (prefers-reduced-motion: reduce)')) failures.push('Missing reduced-motion treatment');
-if (!css.includes('@media (max-width: 720px)')) failures.push('Missing mobile breakpoint');
+if (!css.includes('@media (max-width: 760px)')) failures.push('Missing mobile breakpoint');
 if (!script.includes('IntersectionObserver')) failures.push('Missing progressive reveal handling');
-if (!html.includes('data-scroll-story')) failures.push('Missing scroll-led product story');
-if (!html.includes('data-terminal-tab')) failures.push('Missing interactive evidence terminal');
-if (!script.includes('requestAnimationFrame')) failures.push('Missing frame-synchronised motion');
+if (!html.includes('data-loop-demo')) failures.push('Missing verification loop demo');
+if (!html.includes('data-replay')) failures.push('Missing demo replay control');
+if (!html.includes('data-copy="npm run demo"')) failures.push('Missing copyable demo command');
 if (/<script[^>]+src="https?:|<link[^>]+href="https?:/i.test(html)) failures.push('External runtime asset found');
+
+const requiredSections = [
+  ['what', 'WHAT LOOOP DOES'],
+  ['for', 'WHO IT IS FOR'],
+  ['value', 'THE VALUE IT PROVIDES'],
+  ['difference', 'WHY IT IS DIFFERENT'],
+  ['next', 'WHAT TO DO NEXT'],
+];
+
+requiredSections.forEach(([id, label]) => {
+  if (!html.includes(`id="${id}"`)) failures.push(`Missing #${id} section`);
+  if (!html.includes(label)) failures.push(`Missing ${label} content`);
+});
 
 if (failures.length) {
   console.error(failures.map((failure) => `✗ ${failure}`).join('\n'));

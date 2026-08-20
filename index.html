@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#080808" />
-    <meta name="description" content="Looop builds apps, runs real checks, repairs failures, and stops when the work is proven." />
+    <meta name="theme-color" content="#f5f8ff" />
+    <meta name="description" content="Looop builds apps, verifies the real output, repairs failures, and stops only when every required check passes." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="looop — Build apps that prove they work" />
-    <meta property="og:description" content="AI app building with a real definition of done." />
+    <meta property="og:description" content="One prompt. Every check. Until green." />
     <meta property="og:image" content="./og-image.svg" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="preload" href="./styles.css" as="style" />
+    <link rel="preload" href="./assets/looop-landscape.webp" as="image" type="image/webp" media="(min-width: 700px)" />
     <link rel="stylesheet" href="./styles.css" />
     <script>document.documentElement.classList.add('js');</script>
     <title>looop — Build apps that prove they work</title>
@@ -23,7 +24,7 @@
     <header class="site-header" data-header>
       <nav class="nav container" aria-label="Primary navigation">
         <a class="brand" href="#top" aria-label="Looop home">
-          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <img src="./assets/looop-logo.svg" alt="" width="38" height="38" />
           <span>looop</span>
         </a>
 
@@ -32,166 +33,177 @@
         </button>
 
         <div class="nav-links" id="nav-links" data-nav-links>
-          <a href="#what">What it does</a>
-          <a href="#for">Who it is for</a>
-          <a href="#difference">Why different</a>
+          <a href="#what">Product</a>
+          <a href="#for">For whom</a>
+          <a href="#value">Benefits</a>
+          <a href="#difference">Why Looop</a>
         </div>
 
-        <a class="button button-small" href="https://github.com/varunjose/Looop" target="_blank" rel="noreferrer">
-          View GitHub <span aria-hidden="true">↗</span>
+        <a class="button button-dark nav-cta" href="https://github.com/varunjose/Looop" target="_blank" rel="noreferrer">
+          View source <span aria-hidden="true">↗</span>
         </a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-glow" aria-hidden="true"></div>
-        <div class="container hero-grid">
-          <div class="hero-copy reveal">
-            <p class="eyebrow"><i></i> AI APP BUILDER WITH A REAL ORACLE</p>
-            <h1 id="hero-title">Build apps that<br /><span>prove they work.</span></h1>
-            <p class="hero-lede">
-              Looop generates your app, tests the real output, repairs what fails, and repeats until every required check passes.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#what">See how it works <span>↓</span></a>
-              <a class="text-link" href="https://github.com/varunjose/Looop" target="_blank" rel="noreferrer">Explore the source ↗</a>
-            </div>
-          </div>
+        <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
 
-          <div class="demo-shell reveal" data-loop-demo aria-label="Animated example of a Looop build">
-            <div class="demo-bar">
-              <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span>payments-dashboard</span>
-              <button type="button" data-replay aria-label="Replay build example">↻</button>
+        <div class="container hero-copy reveal">
+          <p class="eyebrow"><i></i> AUTONOMOUS APP BUILDER</p>
+          <h1 id="hero-title">One prompt.<br />Every check.<br /><span>Until green.</span></h1>
+          <p class="hero-lede">Looop builds your app, tests the real workspace, repairs what fails, and keeps going until the work is proven.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#what">See how Looop works <span aria-hidden="true">↓</span></a>
+            <a class="button button-glass" href="https://github.com/varunjose/Looop" target="_blank" rel="noreferrer">Open GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <ul class="hero-notes" aria-label="Product qualities">
+            <li><i>✓</i> Real verification</li>
+            <li><i>✓</i> Automatic repair</li>
+            <li><i>✓</i> Stops when progress stops</li>
+          </ul>
+        </div>
+
+        <div class="container hero-stage reveal">
+          <img class="landscape" src="./assets/looop-landscape.webp" alt="Abstract blue mountains reflected in a calm lake" width="1586" height="992" fetchpriority="high" />
+
+          <div class="product-window" data-loop-demo aria-label="Animated example of a Looop verification run">
+            <div class="window-bar">
+              <div class="window-brand"><img src="./assets/looop-logo.svg" alt="" width="26" height="26" /><strong>looop</strong><span>/ payments-dashboard</span></div>
+              <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+              <button type="button" data-replay aria-label="Replay verification example">Replay <span>↻</span></button>
             </div>
-            <div class="demo-body">
-              <div class="demo-prompt"><span>✦</span><p>Add searchable transactions, refunds, and an audit trail.</p></div>
-              <div class="demo-status">
-                <div class="demo-status-head"><span data-attempt>Attempt 1</span><strong data-score>0%</strong></div>
-                <div class="progress"><i data-progress></i></div>
+
+            <div class="window-content">
+              <aside class="demo-sidebar" aria-label="Build stages">
+                <span>BUILD SESSION</span>
+                <ol>
+                  <li class="is-complete"><i>✓</i><span>Intent<small>Prompt understood</small></span></li>
+                  <li class="is-complete"><i>✓</i><span>Blueprint<small>Workspace ready</small></span></li>
+                  <li class="is-current" data-demo-stage="oracle"><i>03</i><span>Oracle<small data-demo-stage-label="oracle">Running checks</small></span></li>
+                  <li data-demo-stage="result"><i>04</i><span>Result<small data-demo-stage-label="result">Waiting</small></span></li>
+                </ol>
+              </aside>
+
+              <div class="demo-main">
+                <div class="demo-prompt"><span>✦</span><p>Add searchable transactions, refunds, and an audit trail.</p><b>Build</b></div>
+
+                <div class="demo-heading">
+                  <div><span>VERIFICATION</span><h2>Checking the real app.</h2></div>
+                  <div class="score"><span data-score>0%</span><small>oracle score</small></div>
+                </div>
+
+                <div class="demo-progress"><i data-progress></i></div>
+                <div class="attempt-row"><span data-attempt>Attempt 1</span><small>Generate → verify → repair</small></div>
+
+                <div class="check-list" aria-live="polite">
+                  <div class="check" data-check="build"><span><i></i><b>Build</b><small>Materialise the workspace</small></span><em data-check-label="build">Running</em></div>
+                  <div class="check" data-check="type"><span><i></i><b>Typecheck</b><small>Run TypeScript compiler</small></span><em data-check-label="type">Waiting</em></div>
+                  <div class="check" data-check="unit"><span><i></i><b>Unit tests</b><small>Verify expected behavior</small></span><em data-check-label="unit">Waiting</em></div>
+                  <div class="check" data-check="e2e"><span><i></i><b>End-to-end</b><small>Test the user journey</small></span><em data-check-label="e2e">Waiting</em></div>
+                </div>
+
+                <div class="demo-result" data-result><i>✓</i><span><strong>Converged</strong><small>Every blocking check passed · 2 attempts</small></span></div>
               </div>
-              <div class="check-list" aria-live="polite">
-                <div class="check" data-check="build"><span><i></i> Build</span><b data-check-label="build">Running</b></div>
-                <div class="check" data-check="type"><span><i></i> Typecheck</span><b data-check-label="type">Waiting</b></div>
-                <div class="check" data-check="unit"><span><i></i> Unit tests</span><b data-check-label="unit">Waiting</b></div>
-                <div class="check" data-check="e2e"><span><i></i> End-to-end</span><b data-check-label="e2e">Waiting</b></div>
-              </div>
-              <div class="demo-result" data-result><i>✓</i><span><strong>Converged</strong><small>2 attempts · $0.0240 · 4.1s</small></span></div>
             </div>
           </div>
         </div>
-      </section>
 
-      <section class="proof-bar" aria-label="Core product proof">
-        <div class="container proof-grid">
-          <div><strong>236</strong><span>tests in the supplied core</span></div>
-          <div><strong>3</strong><span>real verification layers</span></div>
-          <div><strong>0</strong><span>model calls inside verify()</span></div>
+        <div class="container proof-pills reveal" aria-label="Core product proof">
+          <span><strong>236</strong> tests in the supplied core</span>
+          <span><strong>3</strong> real verification layers</span>
+          <span><strong>0</strong> model calls inside verify()</span>
         </div>
       </section>
 
-      <section class="section" id="what" aria-labelledby="what-title">
+      <section class="section what" id="what" aria-labelledby="what-title">
         <div class="container">
-          <div class="section-heading reveal">
-            <p class="section-label">01 / WHAT LOOOP DOES</p>
-            <h2 id="what-title">From prompt<br />to passing.</h2>
-            <p>Looop owns the work between “generate something” and “this is safe to move forward.”</p>
+          <div class="section-intro centered reveal">
+            <p class="section-label">01 · WHAT LOOOP DOES</p>
+            <h2 id="what-title">From an idea<br />to a verified app.</h2>
+            <p>Looop handles the work between “generate something” and “this is ready to move forward.”</p>
           </div>
 
-          <ol class="process reveal">
-            <li><span>01</span><div><strong>Start with a prompt</strong><p>Describe the app or change you need in plain language.</p></div></li>
-            <li><span>02</span><div><strong>Build from a tested blueprint</strong><p>Looop materialises a passing foundation and writes only inside safe slots.</p></div></li>
-            <li><span>03</span><div><strong>Run real checks</strong><p>Typecheck, unit tests, and browser journeys inspect the actual workspace.</p></div></li>
-            <li><span>04</span><div><strong>Repair or stop</strong><p>Failures guide the next attempt. Repeated failures stop the loop before it wastes more budget.</p></div></li>
+          <ol class="process-grid reveal">
+            <li><span>01</span><div class="process-icon">✦</div><h3>Describe it</h3><p>Explain the app or change you need in normal language.</p></li>
+            <li><span>02</span><div class="process-icon">⌘</div><h3>Build it</h3><p>Looop starts from a tested blueprint and writes inside safe slots.</p></li>
+            <li><span>03</span><div class="process-icon">✓</div><h3>Verify it</h3><p>Typecheck, unit tests, and browser journeys inspect the real output.</p></li>
+            <li><span>04</span><div class="process-icon">↻</div><h3>Repair it</h3><p>Failures become precise repair instructions until every check passes.</p></li>
           </ol>
         </div>
       </section>
 
-      <section class="section section-muted" id="for" aria-labelledby="for-title">
+      <section class="section audience" id="for" aria-labelledby="for-title">
         <div class="container">
-          <div class="section-heading section-heading-compact reveal">
-            <p class="section-label">02 / WHO IT IS FOR</p>
-            <h2 id="for-title">For builders who need<br />more than a first draft.</h2>
+          <div class="section-intro reveal">
+            <p class="section-label">02 · WHO IT IS FOR</p>
+            <h2 id="for-title">Built for people who need<br />more than a first draft.</h2>
           </div>
 
-          <div class="card-grid reveal">
-            <article class="simple-card">
-              <span>01</span><h3>Technical founders</h3>
-              <p>Turn a product idea into a tested starting point without becoming the cleanup crew.</p>
-            </article>
-            <article class="simple-card">
-              <span>02</span><h3>Product engineers</h3>
-              <p>Use AI to move faster while keeping type safety, tests, and working behavior intact.</p>
-            </article>
-            <article class="simple-card">
-              <span>03</span><h3>Small teams</h3>
-              <p>Prototype internal tools, dashboards, and APIs without handing every failure back to a human.</p>
-            </article>
+          <div class="audience-grid reveal">
+            <article><div class="role-icon founder">F</div><h3>Technical founders</h3><p>Move from product idea to a tested foundation without spending the next week cleaning up generated code.</p><span>Idea → working baseline</span></article>
+            <article><div class="role-icon engineer">E</div><h3>Product engineers</h3><p>Use AI for speed while keeping type safety, tests, and real user behavior in the definition of done.</p><span>Speed + engineering confidence</span></article>
+            <article><div class="role-icon team">T</div><h3>Small product teams</h3><p>Prototype tools, dashboards, and APIs without handing every failed attempt back to a person.</p><span>More output, less cleanup</span></article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="value" aria-labelledby="value-title">
-        <div class="container value-layout">
-          <div class="section-heading reveal">
-            <p class="section-label">03 / THE VALUE IT PROVIDES</p>
+      <section class="section value" id="value" aria-labelledby="value-title">
+        <div class="container value-panel reveal">
+          <div class="value-copy">
+            <p class="section-label light">03 · THE VALUE IT PROVIDES</p>
             <h2 id="value-title">Less cleanup.<br />More confidence.</h2>
+            <p>Get closer to done on the first run—and know exactly why the result is safe to continue with.</p>
           </div>
 
-          <div class="value-list reveal">
-            <article><i>✓</i><div><h3>Start closer to done</h3><p>Get a working baseline with its verification already attached.</p></div></article>
-            <article><i>✓</i><div><h3>Protect what already works</h3><p>Follow-up prompts reuse the same workspace and tests, so regressions are caught before they ship.</p></div></article>
-            <article><i>✓</i><div><h3>Stop wasting attempts</h3><p>Stall and oscillation detection halt the loop when another model call will not help.</p></div></article>
+          <div class="value-cards">
+            <article><span>01</span><h3>Start closer to done</h3><p>A working baseline arrives with its verification already attached.</p></article>
+            <article><span>02</span><h3>Protect what works</h3><p>Existing tests travel with every follow-up prompt, catching regressions early.</p></article>
+            <article><span>03</span><h3>Stop wasted attempts</h3><p>Stall and oscillation detection stop the loop when another model call will not help.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="section section-muted" id="difference" aria-labelledby="difference-title">
+      <section class="section difference" id="difference" aria-labelledby="difference-title">
         <div class="container">
-          <div class="section-heading reveal">
-            <p class="section-label">04 / WHY IT IS DIFFERENT</p>
+          <div class="section-intro centered reveal">
+            <p class="section-label">04 · WHY IT IS DIFFERENT</p>
             <h2 id="difference-title">The model builds.<br /><span>The oracle decides.</span></h2>
-            <p>Most AI builders ask the model whether its own answer is good enough. Looop separates creating from judging.</p>
+            <p>Creation and judgment are separate. The model can write code, but only real checks can declare it finished.</p>
           </div>
 
           <div class="comparison reveal" role="table" aria-label="Typical AI builder compared with Looop">
             <div class="comparison-row comparison-head" role="row">
               <span role="columnheader">Decision</span><span role="columnheader">Typical AI builder</span><span role="columnheader">Looop</span>
             </div>
-            <div class="comparison-row" role="row">
-              <strong role="rowheader">Definition of done</strong><span>Output looks plausible</span><span><i>✓</i> Every blocking check passes</span>
-            </div>
-            <div class="comparison-row" role="row">
-              <strong role="rowheader">Who verifies</strong><span>The same model</span><span><i>✓</i> Real tools, no model call</span>
-            </div>
-            <div class="comparison-row" role="row">
-              <strong role="rowheader">After a failure</strong><span>The user debugs</span><span><i>✓</i> The loop repairs from evidence</span>
-            </div>
-            <div class="comparison-row" role="row">
-              <strong role="rowheader">When progress stops</strong><span>Runs to a step limit</span><span><i>✓</i> Detects stalls and stops spending</span>
-            </div>
+            <div class="comparison-row" role="row"><strong role="rowheader">Definition of done</strong><span>Output looks plausible</span><span><i>✓</i> Every blocking check passes</span></div>
+            <div class="comparison-row" role="row"><strong role="rowheader">Who verifies</strong><span>The same model</span><span><i>✓</i> Real tools, no model call</span></div>
+            <div class="comparison-row" role="row"><strong role="rowheader">After a failure</strong><span>The user debugs it</span><span><i>✓</i> Repairs from test evidence</span></div>
+            <div class="comparison-row" role="row"><strong role="rowheader">When progress stops</strong><span>Runs to a step limit</span><span><i>✓</i> Detects stalls and stops spending</span></div>
           </div>
         </div>
       </section>
 
       <section class="next" id="next" aria-labelledby="next-title">
-        <div class="container next-card reveal">
-          <p class="section-label">05 / WHAT TO DO NEXT</p>
+        <div class="container next-panel reveal">
+          <div class="next-shine" aria-hidden="true"></div>
+          <img src="./assets/looop-logo.svg" alt="" width="76" height="76" />
+          <p class="section-label light">05 · WHAT TO DO NEXT</p>
           <h2 id="next-title">See the loop<br />for yourself.</h2>
           <p>Run the local demo, inspect the verifier, and see exactly what Looop calls “done.”</p>
           <div class="next-actions">
-            <a class="button button-primary" href="https://github.com/varunjose/Looop" target="_blank" rel="noreferrer">Open on GitHub <span>↗</span></a>
+            <a class="button button-white" href="https://github.com/varunjose/Looop" target="_blank" rel="noreferrer">Open on GitHub <span aria-hidden="true">↗</span></a>
             <button class="command" type="button" data-copy="npm run demo"><code>npm run demo</code><span data-copy-label>Copy</span></button>
           </div>
-          <small><i></i> Core engine and simulation are available. Public live generation still needs auth, quotas, billing, and abuse protection.</small>
+          <small>Core engine and simulation are available. Public live generation still needs auth, quotas, billing, and abuse protection.</small>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>looop</span></a>
+        <a class="brand" href="#top"><img src="./assets/looop-logo.svg" alt="" width="36" height="36" /><span>looop</span></a>
         <p>Generate · verify · repair · repeat</p>
         <span>© <span data-year></span> looop.app</span>
       </div>

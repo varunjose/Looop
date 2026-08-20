@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title description">
+  <title id="title">Looop logo</title>
+  <desc id="description">Three overlapping orange circles on a near-black background.</desc>
+  <rect width="400" height="400" fill="#0e0d09"/>
+  <circle cx="102" cy="134" r="66" fill="#fb6415"/>
+  <circle cx="200" cy="200" r="66" fill="#fe8305"/>
+  <circle cx="298" cy="266" r="66" fill="#fb6415"/>
+</svg>

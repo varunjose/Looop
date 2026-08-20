@@ -11,6 +11,7 @@ const mimeTypes = {
   '.css': 'text/css; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
   '.svg': 'image/svg+xml',
+  '.webp': 'image/webp',
 };
 
 const server = createServer((request, response) => {

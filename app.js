@@ -64,6 +64,8 @@ const attemptLabel = loopDemo?.querySelector('[data-attempt]');
 const scoreLabel = loopDemo?.querySelector('[data-score]');
 const progressBar = loopDemo?.querySelector('[data-progress]');
 const result = loopDemo?.querySelector('[data-result]');
+const oracleStage = loopDemo?.querySelector('[data-demo-stage="oracle"]');
+const resultStage = loopDemo?.querySelector('[data-demo-stage="result"]');
 let demoTimers = [];
 let demoHasPlayed = false;
 
@@ -130,7 +132,20 @@ const renderDemoState = (state) => {
   if (attemptLabel) attemptLabel.textContent = state.attempt;
   if (scoreLabel) scoreLabel.textContent = `${state.score}%`;
   if (progressBar) progressBar.style.width = `${state.score}%`;
-  result?.classList.toggle('is-visible', Boolean(state.complete));
+  const complete = Boolean(state.complete);
+  result?.classList.toggle('is-visible', complete);
+
+  oracleStage?.classList.toggle('is-current', !complete);
+  oracleStage?.classList.toggle('is-complete', complete);
+  resultStage?.classList.toggle('is-complete', complete);
+  const oracleIcon = oracleStage?.querySelector('i');
+  const resultIcon = resultStage?.querySelector('i');
+  const oracleStageLabel = oracleStage?.querySelector('[data-demo-stage-label]');
+  const resultStageLabel = resultStage?.querySelector('[data-demo-stage-label]');
+  if (oracleIcon) oracleIcon.textContent = complete ? '✓' : '03';
+  if (resultIcon) resultIcon.textContent = complete ? '✓' : '04';
+  if (oracleStageLabel) oracleStageLabel.textContent = complete ? 'Checks passed' : 'Running checks';
+  if (resultStageLabel) resultStageLabel.textContent = complete ? 'Converged' : 'Waiting';
 
   Object.entries(state.checks).forEach(([name, [status, label]]) => {
     const check = loopDemo?.querySelector(`[data-check="${name}"]`);

@@ -22,6 +22,8 @@ if (!script.includes('IntersectionObserver')) failures.push('Missing progressive
 if (!html.includes('data-loop-demo')) failures.push('Missing verification loop demo');
 if (!html.includes('data-replay')) failures.push('Missing demo replay control');
 if (!html.includes('data-copy="npm run demo"')) failures.push('Missing copyable demo command');
+if (!html.includes('./assets/looop-logo.svg')) failures.push('Missing supplied Looop logo');
+if (!html.includes('./assets/looop-landscape.webp')) failures.push('Missing original blue landscape');
 if (/<script[^>]+src="https?:|<link[^>]+href="https?:/i.test(html)) failures.push('External runtime asset found');
 
 const requiredSections = [

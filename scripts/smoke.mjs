@@ -2,7 +2,15 @@ import { spawn } from 'node:child_process';
 
 const port = 43173;
 const baseUrl = `http://127.0.0.1:${port}`;
-const paths = ['/', '/styles.css', '/app.js', '/favicon.svg', '/og-image.svg'];
+const paths = [
+  '/',
+  '/styles.css',
+  '/app.js',
+  '/favicon.svg',
+  '/og-image.svg',
+  '/assets/looop-logo.svg',
+  '/assets/looop-landscape.webp',
+];
 
 const server = spawn(process.execPath, ['scripts/serve.mjs'], {
   cwd: new URL('..', import.meta.url),

@@ -1,14 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#f7fbff"/>
-      <stop offset=".56" stop-color="#eaf4ff"/>
-      <stop offset="1" stop-color="#d8ecff"/>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#0d47d8"/>
+      <stop offset=".58" stop-color="#1468f4"/>
+      <stop offset="1" stop-color="#38a8f6"/>
     </linearGradient>
     <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#0b4bd0"/>
-      <stop offset=".55" stop-color="#247ff4"/>
-      <stop offset="1" stop-color="#68bfff"/>
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dff4ff"/>
     </linearGradient>
     <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
       <stop stop-color="#8bd1ff"/>
@@ -19,7 +18,7 @@
     </filter>
   </defs>
   <rect width="1200" height="630" fill="url(#page)"/>
-  <g opacity=".18" stroke="#4e8ed6">
+  <g opacity=".13" stroke="#ffffff">
     <path d="M0 80h1200M0 160h1200M0 240h1200M0 320h1200M0 400h1200M0 480h1200M0 560h1200"/>
     <path d="M80 0v630M160 0v630M240 0v630M320 0v630M400 0v630M480 0v630M560 0v630M640 0v630M720 0v630M800 0v630M880 0v630M960 0v630M1040 0v630M1120 0v630"/>
   </g>
@@ -29,11 +28,10 @@
     <circle cx="35" cy="35" r="14" fill="#fe8305"/>
     <circle cx="48" cy="46" r="14" fill="#fb6415"/>
   </g>
-  <text x="154" y="106" fill="#101828" font-family="Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-2">looop</text>
-  <text x="68" y="270" fill="#101828" font-family="Arial, sans-serif" font-size="93" font-weight="500" letter-spacing="-7">One prompt.</text>
-  <text x="68" y="365" fill="#101828" font-family="Arial, sans-serif" font-size="93" font-weight="500" letter-spacing="-7">Every check.</text>
-  <text x="68" y="460" fill="url(#word)" font-family="Arial, sans-serif" font-size="93" font-weight="500" letter-spacing="-7">Until green.</text>
-  <text x="72" y="533" fill="#64748b" font-family="Arial, sans-serif" font-size="23">Generate · verify · repair · repeat</text>
+  <text x="154" y="106" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-2">looop</text>
+  <text x="68" y="294" fill="#ffffff" font-family="Arial, sans-serif" font-size="105" font-weight="700" letter-spacing="-8">Build with AI.</text>
+  <text x="68" y="405" fill="url(#word)" font-family="Georgia, serif" font-size="102" font-style="italic" font-weight="400" letter-spacing="-6">Ship with proof.</text>
+  <text x="72" y="500" fill="#d9efff" font-family="Arial, sans-serif" font-size="23">Generate · verify · repair · repeat</text>
   <g transform="translate(860 135)" filter="url(#shadow)">
     <path d="M0 240 100 95l72 102 72-82 116 146H0Z" fill="#acdafe" opacity=".85"/>
     <path d="M0 240h360v138H0z" fill="url(#lake)" opacity=".82"/>

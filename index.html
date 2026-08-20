@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f5f8ff" />
+    <meta name="theme-color" content="#1467f4" />
     <meta name="description" content="Looop builds apps, verifies the real output, repairs failures, and stops only when every required check passes." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="looop — Build apps that prove they work" />
-    <meta property="og:description" content="One prompt. Every check. Until green." />
+    <meta property="og:description" content="Build with AI. Ship with proof." />
     <meta property="og:image" content="./og-image.svg" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
@@ -51,17 +51,17 @@
         <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
 
         <div class="container hero-copy reveal">
-          <p class="eyebrow"><i></i> AUTONOMOUS APP BUILDER</p>
-          <h1 id="hero-title">One prompt.<br />Every check.<br /><span>Until green.</span></h1>
-          <p class="hero-lede">Looop builds your app, tests the real workspace, repairs what fails, and keeps going until the work is proven.</p>
+          <p class="eyebrow"><i></i> AI APP BUILDING, WITH A DEFINITION OF DONE</p>
+          <h1 id="hero-title"><span>Build with AI.</span><em>Ship with proof.</em></h1>
+          <p class="hero-lede">Looop turns a product request into a working app, verifies the real workspace, and repairs every failed check until the result is ready—or progress safely stops.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#what">See how Looop works <span aria-hidden="true">↓</span></a>
-            <a class="button button-glass" href="https://github.com/varunjose/Looop" target="_blank" rel="noreferrer">Open GitHub <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#what">Explore the product <span aria-hidden="true">↓</span></a>
+            <a class="button button-glass" href="https://github.com/varunjose/Looop" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
           </div>
           <ul class="hero-notes" aria-label="Product qualities">
-            <li><i>✓</i> Real verification</li>
-            <li><i>✓</i> Automatic repair</li>
-            <li><i>✓</i> Stops when progress stops</li>
+            <li><i>01</i> Builds from a tested blueprint</li>
+            <li><i>02</i> Verifies with real tools</li>
+            <li><i>03</i> Repairs from evidence</li>
           </ul>
         </div>
 
@@ -125,89 +125,146 @@
             <p>Looop turns a plain-language request into a constrained build, checks the real workspace, and uses every failure as the next repair instruction.</p>
           </div>
 
-          <ol class="process-grid reveal">
-            <li>
-              <div class="process-top"><span>01</span><em>INPUT</em></div>
-              <div class="process-icon">✦</div>
-              <h3>Describe it</h3>
-              <p>Explain the app, feature, or change you need in normal language.</p>
-              <ul class="process-details">
-                <li>Capture the product goal</li>
-                <li>Define scope and acceptance checks</li>
-              </ul>
-              <div class="process-output"><span>OUTPUT</span><strong>Structured build intent</strong></div>
-            </li>
-            <li>
-              <div class="process-top"><span>02</span><em>FOUNDATION</em></div>
-              <div class="process-icon">⌘</div>
-              <h3>Build it</h3>
-              <p>Looop starts from a known-good blueprint instead of an empty folder.</p>
-              <ul class="process-details">
-                <li>Materialize tested project structure</li>
-                <li>Write only inside marked safe slots</li>
-              </ul>
-              <div class="process-output"><span>OUTPUT</span><strong>Runnable workspace</strong></div>
-            </li>
-            <li>
-              <div class="process-top"><span>03</span><em>ORACLE</em></div>
-              <div class="process-icon">✓</div>
-              <h3>Verify it</h3>
-              <p>Independent tools inspect the actual files and working behavior.</p>
-              <ul class="process-details">
-                <li>Run typecheck and unit tests</li>
-                <li>Exercise real browser journeys</li>
-              </ul>
-              <div class="process-output"><span>OUTPUT</span><strong>Pass or fail evidence</strong></div>
-            </li>
-            <li>
-              <div class="process-top"><span>04</span><em>LOOP</em></div>
-              <div class="process-icon">↻</div>
-              <h3>Repair it</h3>
-              <p>Exact failures guide the next attempt—without hiding the evidence.</p>
-              <ul class="process-details">
-                <li>Repair from the failed checks</li>
-                <li>Detect stalls and repeated failures</li>
-              </ul>
-              <div class="process-output"><span>OUTPUT</span><strong>Converged or stopped safely</strong></div>
-            </li>
-          </ol>
+          <div class="feature-frame process-frame reveal">
+            <div class="frame-heading">
+              <span>VERIFICATION PIPELINE</span>
+              <p>One instruction enters. A proven workspace leaves.</p>
+            </div>
 
-          <div class="process-summary reveal">
-            <div class="process-summary-intro"><span>WHAT COMES OUT</span><h3>More than generated code.</h3></div>
-            <article><i>01</i><div><strong>A tested starting point</strong><p>Blueprints begin in a known-good state, reducing the surface area the model can break.</p></div></article>
-            <article><i>02</i><div><strong>Evidence for every decision</strong><p>See the checks, score, cost, timing, and failure that shaped each attempt.</p></div></article>
-            <article><i>03</i><div><strong>A safe stopping rule</strong><p>Finish only when all blocking checks pass—or stop when the loop is no longer improving.</p></div></article>
+            <ol class="process-grid">
+              <li>
+                <div class="process-top"><span>01</span><em>INPUT</em></div>
+                <div class="process-icon">✦</div>
+                <h3>Describe it</h3>
+                <p>Explain the app, feature, or change you need in normal language.</p>
+                <ul class="process-details">
+                  <li>Capture the product goal</li>
+                  <li>Define scope and acceptance checks</li>
+                </ul>
+                <div class="process-output"><span>OUTPUT</span><strong>Structured build intent</strong></div>
+              </li>
+              <li>
+                <div class="process-top"><span>02</span><em>FOUNDATION</em></div>
+                <div class="process-icon">⌘</div>
+                <h3>Build it</h3>
+                <p>Looop starts from a known-good blueprint instead of an empty folder.</p>
+                <ul class="process-details">
+                  <li>Materialize tested project structure</li>
+                  <li>Write only inside marked safe slots</li>
+                </ul>
+                <div class="process-output"><span>OUTPUT</span><strong>Runnable workspace</strong></div>
+              </li>
+              <li>
+                <div class="process-top"><span>03</span><em>ORACLE</em></div>
+                <div class="process-icon">✓</div>
+                <h3>Verify it</h3>
+                <p>Independent tools inspect the actual files and working behavior.</p>
+                <ul class="process-details">
+                  <li>Run typecheck and unit tests</li>
+                  <li>Exercise real browser journeys</li>
+                </ul>
+                <div class="process-output"><span>OUTPUT</span><strong>Pass or fail evidence</strong></div>
+              </li>
+              <li>
+                <div class="process-top"><span>04</span><em>LOOP</em></div>
+                <div class="process-icon">↻</div>
+                <h3>Repair it</h3>
+                <p>Exact failures guide the next attempt—without hiding the evidence.</p>
+                <ul class="process-details">
+                  <li>Repair from the failed checks</li>
+                  <li>Detect stalls and repeated failures</li>
+                </ul>
+                <div class="process-output"><span>OUTPUT</span><strong>Converged or stopped safely</strong></div>
+              </li>
+            </ol>
+
+            <div class="process-summary">
+              <div class="process-summary-intro"><span>WHAT COMES OUT</span><h3>More than generated code.</h3></div>
+              <article><i>01</i><div><strong>A tested starting point</strong><p>Blueprints begin in a known-good state, reducing the surface area the model can break.</p></div></article>
+              <article><i>02</i><div><strong>Evidence for every decision</strong><p>See the checks, score, cost, timing, and failure that shaped each attempt.</p></div></article>
+              <article><i>03</i><div><strong>A safe stopping rule</strong><p>Finish only when all blocking checks pass—or stop when the loop is no longer improving.</p></div></article>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section audience" id="for" aria-labelledby="for-title">
         <div class="container">
-          <div class="section-intro reveal">
+          <div class="section-intro centered reveal">
             <p class="section-label">02 · WHO IT IS FOR</p>
             <h2 id="for-title">Built for people who need<br />more than a first draft.</h2>
+            <p>Looop is for builders who want AI speed without becoming the manual testing and repair layer themselves.</p>
           </div>
 
-          <div class="audience-grid reveal">
-            <article><div class="role-icon founder">F</div><h3>Technical founders</h3><p>Move from product idea to a tested foundation without spending the next week cleaning up generated code.</p><span>Idea → working baseline</span></article>
-            <article><div class="role-icon engineer">E</div><h3>Product engineers</h3><p>Use AI for speed while keeping type safety, tests, and real user behavior in the definition of done.</p><span>Speed + engineering confidence</span></article>
-            <article><div class="role-icon team">T</div><h3>Small product teams</h3><p>Prototype tools, dashboards, and APIs without handing every failed attempt back to a person.</p><span>More output, less cleanup</span></article>
+          <div class="feature-frame audience-frame reveal">
+            <div class="frame-heading">
+              <span>THREE WAYS TO USE LOOOP</span>
+              <p>Choose the outcome that matches your team.</p>
+            </div>
+            <div class="audience-grid">
+              <article>
+                <div class="role-top"><div class="role-icon founder">F</div><span>FOUNDER</span></div>
+                <h3>Technical founders</h3>
+                <p>Move from a product idea to a tested foundation without spending the next week cleaning up generated code.</p>
+                <div class="role-needs"><span>BEST WHEN YOU NEED</span><ul><li>A credible MVP baseline</li><li>Proof before the next build step</li></ul></div>
+                <div class="role-result"><span>RESULT</span><strong>Idea → working baseline</strong></div>
+              </article>
+              <article>
+                <div class="role-top"><div class="role-icon engineer">E</div><span>ENGINEER</span></div>
+                <h3>Product engineers</h3>
+                <p>Use AI for speed while keeping types, tests, and real user behavior inside the definition of done.</p>
+                <div class="role-needs"><span>BEST WHEN YOU NEED</span><ul><li>Fast feature exploration</li><li>Regression-aware iteration</li></ul></div>
+                <div class="role-result"><span>RESULT</span><strong>Speed + engineering confidence</strong></div>
+              </article>
+              <article>
+                <div class="role-top"><div class="role-icon team">T</div><span>SMALL TEAM</span></div>
+                <h3>Product teams</h3>
+                <p>Prototype tools, dashboards, and APIs without handing every failed attempt back to a person.</p>
+                <div class="role-needs"><span>BEST WHEN YOU NEED</span><ul><li>More experiments per sprint</li><li>A visible verification trail</li></ul></div>
+                <div class="role-result"><span>RESULT</span><strong>More output, less cleanup</strong></div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section value" id="value" aria-labelledby="value-title">
-        <div class="container value-panel reveal">
-          <div class="value-copy">
-            <p class="section-label light">03 · THE VALUE IT PROVIDES</p>
+        <div class="container">
+          <div class="section-intro centered reveal">
+            <p class="section-label">03 · THE VALUE IT PROVIDES</p>
             <h2 id="value-title">Less cleanup.<br />More confidence.</h2>
-            <p>Get closer to done on the first run—and know exactly why the result is safe to continue with.</p>
+            <p>Each run produces a usable workspace and the evidence needed to decide what happens next.</p>
           </div>
 
-          <div class="value-cards">
-            <article><span>01</span><h3>Start closer to done</h3><p>A working baseline arrives with its verification already attached.</p></article>
-            <article><span>02</span><h3>Protect what works</h3><p>Existing tests travel with every follow-up prompt, catching regressions early.</p></article>
-            <article><span>03</span><h3>Stop wasted attempts</h3><p>Stall and oscillation detection stop the loop when another model call will not help.</p></article>
+          <div class="feature-frame value-frame reveal">
+            <div class="frame-heading">
+              <span>VALUE, MADE VISIBLE</span>
+              <p>Not just faster output—fewer unknowns.</p>
+            </div>
+            <div class="value-grid">
+              <article class="value-card value-card-wide">
+                <div class="value-card-copy"><span>01 · TESTED FOUNDATION</span><h3>Start closer to done.</h3><p>Looop begins from a known-good blueprint and limits edits to safe, intentional slots.</p></div>
+                <div class="file-visual" aria-hidden="true">
+                  <div class="visual-bar"><i></i><i></i><i></i><span>workspace</span></div>
+                  <ul><li><b>⌄</b><span>src</span><em>ready</em></li><li><b>TS</b><span>app.ts</span><em>checked</em></li><li><b>✓</b><span>app.test.ts</span><em>passing</em></li><li><b>◆</b><span>e2e.spec.ts</span><em>passing</em></li></ul>
+                </div>
+              </article>
+
+              <article class="value-card">
+                <div class="value-card-copy"><span>02 · REGRESSION SAFETY</span><h3>Protect what already works.</h3><p>Existing tests travel with every follow-up request, so new work cannot quietly erase old behavior.</p></div>
+                <div class="history-visual" aria-hidden="true"><span>Prompt 01 <i>✓</i></span><span>Prompt 02 <i>✓</i></span><span class="is-active">Prompt 03 <i>running</i></span></div>
+              </article>
+
+              <article class="value-card">
+                <div class="value-card-copy"><span>03 · TRACEABLE EVIDENCE</span><h3>Know why it passed.</h3><p>Every attempt records its score, checks, time, and repair signal.</p></div>
+                <div class="metric-visual" aria-hidden="true"><div><strong>100%</strong><span>oracle score</span></div><div><strong>4/4</strong><span>checks passed</span></div><div><strong>2</strong><span>attempts</span></div></div>
+              </article>
+
+              <article class="value-card value-card-wide value-stop">
+                <div class="value-card-copy"><span>04 · SAFE STOPPING</span><h3>Stop spending when progress stops.</h3><p>Looop detects repeated results, score stalls, and oscillation instead of consuming attempts forever.</p></div>
+                <div class="stop-visual" aria-hidden="true"><span>A</span><i>→</i><span>B</span><i>→</i><span>A</span><strong>Oscillation detected</strong></div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -220,14 +277,30 @@
             <p>Creation and judgment are separate. The model can write code, but only real checks can declare it finished.</p>
           </div>
 
-          <div class="comparison reveal" role="table" aria-label="Typical AI builder compared with Looop">
-            <div class="comparison-row comparison-head" role="row">
-              <span role="columnheader">Decision</span><span role="columnheader">Typical AI builder</span><span role="columnheader">Looop</span>
+          <div class="feature-frame difference-frame reveal">
+            <div class="frame-heading">
+              <span>BUILT AROUND INDEPENDENT JUDGMENT</span>
+              <p>The builder never marks its own work complete.</p>
             </div>
-            <div class="comparison-row" role="row"><strong role="rowheader">Definition of done</strong><span>Output looks plausible</span><span><i>✓</i> Every blocking check passes</span></div>
-            <div class="comparison-row" role="row"><strong role="rowheader">Who verifies</strong><span>The same model</span><span><i>✓</i> Real tools, no model call</span></div>
-            <div class="comparison-row" role="row"><strong role="rowheader">After a failure</strong><span>The user debugs it</span><span><i>✓</i> Repairs from test evidence</span></div>
-            <div class="comparison-row" role="row"><strong role="rowheader">When progress stops</strong><span>Runs to a step limit</span><span><i>✓</i> Detects stalls and stops spending</span></div>
+            <div class="comparison" role="table" aria-label="Typical AI builder compared with Looop">
+              <div class="comparison-row comparison-head" role="row">
+                <span role="columnheader">Decision</span><span role="columnheader">Typical AI builder</span><span role="columnheader">Looop</span>
+              </div>
+              <div class="comparison-row" role="row"><strong role="rowheader">Definition of done</strong><span>Output looks plausible</span><span><i>✓</i> Every blocking check passes</span></div>
+              <div class="comparison-row" role="row"><strong role="rowheader">Who verifies</strong><span>The same model</span><span><i>✓</i> Real tools, no model call</span></div>
+              <div class="comparison-row" role="row"><strong role="rowheader">After a failure</strong><span>The user debugs it</span><span><i>✓</i> Repairs from test evidence</span></div>
+              <div class="comparison-row" role="row"><strong role="rowheader">When progress stops</strong><span>Runs to a step limit</span><span><i>✓</i> Detects stalls and stops spending</span></div>
+            </div>
+
+            <article class="oracle-card">
+              <div class="oracle-copy"><span>THE LOOOP MODEL</span><h3>Creation and judgment stay separate.</h3><p>The model creates and repairs. The oracle runs deterministic checks against the real workspace. The controller decides whether to finish, repair, or stop.</p><ul><li>No model calls inside <code>verify()</code></li><li>Evidence survives every attempt</li><li>Blocking checks control completion</li></ul></div>
+              <div class="oracle-route" aria-label="Looop verification architecture">
+                <div><i>✦</i><span><b>Model</b><small>create + repair</small></span></div><em>→</em>
+                <div><i>⌘</i><span><b>Workspace</b><small>real files</small></span></div><em>→</em>
+                <div><i>✓</i><span><b>Oracle</b><small>real checks</small></span></div><em>→</em>
+                <div class="route-decision"><i>●</i><span><b>Decision</b><small>pass · repair · stop</small></span></div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -243,6 +316,7 @@
             <a class="button button-white" href="https://github.com/varunjose/Looop" target="_blank" rel="noreferrer">Open on GitHub <span aria-hidden="true">↗</span></a>
             <button class="command" type="button" data-copy="npm run demo"><code>npm run demo</code><span data-copy-label>Copy</span></button>
           </div>
+          <ul class="next-proof" aria-label="What you can inspect"><li>Core engine</li><li>Verification logic</li><li>Local simulation</li></ul>
           <small>Core engine and simulation are available. Public live generation still needs auth, quotas, billing, and abuse protection.</small>
         </div>
       </section>

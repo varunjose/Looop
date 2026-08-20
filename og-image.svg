@@ -1,31 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="35%" r="75%">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="0.55" stop-color="#f3f2ff"/>
-      <stop offset="1" stop-color="#dbddff"/>
+    <radialGradient id="aura" cx="50%" cy="45%" r="60%">
+      <stop offset="0" stop-color="#2d1710"/>
+      <stop offset="0.55" stop-color="#0b0909"/>
+      <stop offset="1" stop-color="#050505"/>
     </radialGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ff6548"/>
-      <stop offset="1" stop-color="#6c63ff"/>
+    <linearGradient id="hot" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff4f20"/>
+      <stop offset="0.55" stop-color="#ff8a12"/>
+      <stop offset="1" stop-color="#ffd62b"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00d98b"/>
+      <stop offset="1" stop-color="#8fffd0"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <g opacity=".18" stroke="#6c63ff">
+  <rect width="1200" height="630" fill="url(#aura)"/>
+  <g opacity=".12" stroke="#fff">
     <path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200"/>
-    <path d="M100 0v630M200 0v630M300 0v630M400 0v630M500 0v630M600 0v630M700 0v630M800 0v630M900 0v630M1000 0v630M1100 0v630"/>
+    <path d="M90 0v630M180 0v630M270 0v630M360 0v630M450 0v630M540 0v630M630 0v630M720 0v630M810 0v630M900 0v630M990 0v630M1080 0v630"/>
   </g>
-  <g transform="translate(80 68)" fill="none" stroke="url(#accent)" stroke-width="12">
-    <circle cx="34" cy="34" r="27"/><circle cx="76" cy="34" r="27"/><circle cx="118" cy="34" r="27"/>
+  <g transform="translate(72 58)" fill="none" stroke="#fff" stroke-width="5">
+    <circle cx="18" cy="18" r="15"/><circle cx="41" cy="18" r="15"/><circle cx="64" cy="18" r="15"/>
   </g>
-  <text x="230" y="115" font-family="Arial, sans-serif" font-size="58" font-weight="700" fill="#17172c">looop</text>
-  <text x="80" y="325" font-family="Arial, sans-serif" font-size="105" font-weight="650" letter-spacing="-6" fill="#17172c">From prompt</text>
-  <text x="80" y="430" font-family="Arial, sans-serif" font-size="105" font-weight="650" letter-spacing="-6" fill="url(#accent)">to passing.</text>
-  <text x="84" y="520" font-family="Arial, sans-serif" font-size="30" fill="#52526a">Generate · verify · repair · repeat</text>
-  <g transform="translate(870 100)">
-    <circle cx="130" cy="215" r="110" fill="none" stroke="#17172c" stroke-width="2" opacity=".2"/>
-    <circle cx="130" cy="215" r="78" fill="none" stroke="#6c63ff" stroke-width="18" opacity=".75"/>
-    <path d="M75 215a55 55 0 0 1 110 0" fill="none" stroke="#ff6548" stroke-width="18" stroke-linecap="round"/>
-    <circle cx="185" cy="215" r="13" fill="#53d89b"/>
+  <text x="160" y="91" fill="#f5f5f2" font-family="Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="-2">looop</text>
+  <text x="72" y="270" fill="#f5f5f2" font-family="Arial, sans-serif" font-size="92" font-weight="500" letter-spacing="-7">One prompt.</text>
+  <text x="72" y="362" fill="#85858a" font-family="Arial, sans-serif" font-size="92" font-weight="500" letter-spacing="-7">Every check.</text>
+  <text x="72" y="454" fill="url(#hot)" font-family="Arial, sans-serif" font-size="92" font-weight="500" letter-spacing="-7">Until green.</text>
+  <text x="76" y="525" fill="#737378" font-family="Arial, sans-serif" font-size="23">Generate · verify · repair · repeat</text>
+  <g transform="translate(840 116)">
+    <circle cx="145" cy="185" r="132" fill="#080908" stroke="#262626" stroke-width="2"/>
+    <circle cx="145" cy="185" r="98" fill="none" stroke="#242424" stroke-width="2" stroke-dasharray="8 11"/>
+    <circle cx="145" cy="185" r="63" fill="#0b2118" stroke="url(#green)" stroke-width="10"/>
+    <path d="m118 184 18 19 39-43" fill="none" stroke="#eafff5" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+    <circle cx="266" cy="236" r="11" fill="#ff6a1f"/>
+    <circle cx="38" cy="112" r="7" fill="#ffd62b"/>
   </g>
 </svg>

@@ -19,6 +19,10 @@ if (/href="#"/.test(html)) failures.push('Placeholder href found');
 if (!css.includes('@media (prefers-reduced-motion: reduce)')) failures.push('Missing reduced-motion treatment');
 if (!css.includes('@media (max-width: 720px)')) failures.push('Missing mobile breakpoint');
 if (!script.includes('IntersectionObserver')) failures.push('Missing progressive reveal handling');
+if (!html.includes('data-scroll-story')) failures.push('Missing scroll-led product story');
+if (!html.includes('data-terminal-tab')) failures.push('Missing interactive evidence terminal');
+if (!script.includes('requestAnimationFrame')) failures.push('Missing frame-synchronised motion');
+if (/<script[^>]+src="https?:|<link[^>]+href="https?:/i.test(html)) failures.push('External runtime asset found');
 
 if (failures.length) {
   console.error(failures.map((failure) => `✗ ${failure}`).join('\n'));

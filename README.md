@@ -24,10 +24,11 @@ Pushing `main` runs the included GitHub Pages workflow. It checks the site, buil
 
 ## Design direction
 
-- Editorial scale and atmospheric gradients inspired by IRIS Venture Builder.
-- Compact floating navigation, product-led storytelling, and bento-style feature presentation inspired by Supaste.
-- A Looop-native visual system built around orbit lines, check states, fingerprints, constrained slots, and the generate → verify → repair cycle.
-- No external fonts, images, UI libraries, or runtime dependencies; the page remains lightweight and fast.
+- A cinematic dark interface with long pinned scenes, oversized typography, luminous actions, and scroll-synchronised product storytelling.
+- An original Looop visual system built around orbit lines, test states, failure fingerprints, constrained slots, and the generate → verify → repair cycle.
+- Product UI is drawn natively in HTML, CSS, and inline SVG, with no copied brand assets or external editorial media.
+- No external fonts, image pipeline, CMS, UI libraries, or runtime dependencies; the page remains lightweight and fast on GitHub Pages.
+- Motion responds to scrolling and pointer position, while `prefers-reduced-motion` receives a complete static experience.
 
 ## Project structure
 
